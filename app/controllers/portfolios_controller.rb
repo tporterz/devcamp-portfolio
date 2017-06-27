@@ -51,4 +51,8 @@ class PortfoliosController < ApplicationController
     end
   end
   
+  def angular
+    @angular_portfolio_items = Portfolio.angular
+  end
+  
 end

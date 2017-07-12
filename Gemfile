@@ -54,6 +54,10 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'friendly_id', '~> 5.2', '>= 5.2.1'
 gem 'devise', '~> 4.2' 
+
 gem 'pry', '~> 0.10.3'
 gem 'bcrypt', '~> 3.1', '>= 3.1.11'
+
 gem 'bootstrap', '~> 4.0.0.alpha6'
+
+gem 'tyler_view_tool', git: 'https://github.com/tporterz/tyler_view_tool'

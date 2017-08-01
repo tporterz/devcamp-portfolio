@@ -15,11 +15,11 @@ module ApplicationHelper
       content_tag(:p, greeting, class: "source-greeting")
     end
   end
-  
+
   def copyright_generator
     TylerViewTool::Renderer.copyright 'Tyler Porter', 'All rights reserved'
   end
-  
+
   def nav_items
     [
       {
@@ -28,11 +28,11 @@ module ApplicationHelper
       },
       {
         url: about_me_path,
-        title: 'Our Mission'
+        title: 'About Me'
       },
       {
         url: contact_path,
-        title: 'Contact Us'
+        title: 'Contact'
       },
       {
         url: blogs_path,
@@ -57,6 +57,18 @@ module ApplicationHelper
 
   def active? path
     "active" if current_page? path
+  end
+
+  def alerts
+    alert = (flash[:alert] || flash[:error] || flash[:notice])
+
+    if alert
+      alert_generator alert
+    end
+  end
+
+  def alert_generator msg
+    js add_gritter(msg, title: "Carousel Hat", sticky: false)
   end
 
 end
